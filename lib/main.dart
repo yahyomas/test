@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:open_weather_example_flutter/src/features/weather/presentation/weather_page.dart';
+import 'package:open_weather_example_flutter/src/features/home/home_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Weather App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.light,
+        brightness: Brightness.dark,
         textTheme: TextTheme(
           displayLarge: textStyleWithShadow,
           displayMedium: textStyleWithShadow,
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           bodySmall: const TextStyle(color: Colors.white70, fontSize: 13),
         ),
       ),
-      home: const WeatherPage(city: 'London'),
+      home: const HomeScreen(),
     );
   }
 }

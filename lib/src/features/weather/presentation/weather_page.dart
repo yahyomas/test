@@ -11,6 +11,14 @@ class WeatherPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
+      ),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
@@ -20,11 +28,11 @@ class WeatherPage extends StatelessWidget {
             colors: AppColors.rainGradient,
           ),
         ),
-        child: const SafeArea(
+        child:  SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
-            children: [
+            children: const [
               Spacer(),
               CitySearchBox(),
               Spacer(),
